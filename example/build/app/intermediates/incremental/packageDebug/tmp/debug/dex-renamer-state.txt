@@ -1,0 +1,4 @@
+#Wed Nov 10 15:15:36 BRT 2021
+base.0=/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,0 +1,88 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.radocc.plugins.videoplayerexample"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:35:3-64
+11-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:35:20-62
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[com.google.android.exoplayer:exoplayer-core:2.14.1] /home/diegocchi/.gradle/caches/transforms-2/files-2.1/fccea3c255fdb5067cd45afccafa077a/exoplayer-core-2.14.1/AndroidManifest.xml:24:5-79
+12-->[com.google.android.exoplayer:exoplayer-core:2.14.1] /home/diegocchi/.gradle/caches/transforms-2/files-2.1/fccea3c255fdb5067cd45afccafa077a/exoplayer-core-2.14.1/AndroidManifest.xml:24:22-76
+13
+14    <application
+14-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:4:3-33:17
+15        android:name="com.radocc.app.FlutterApplication"
+15-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:7:5-53
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.1.0] /home/diegocchi/.gradle/caches/transforms-2/files-2.1/6b399c2363bb098ebde1725d903cbda0/core-1.1.0/AndroidManifest.xml:24:18-86
+17        android:debuggable="true"
+18        android:icon="@mipmap/ic_launcher"
+18-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:5:5-39
+19        android:label="video_player_example"
+19-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:6:5-41
+20        android:networkSecurityConfig="@xml/network_security_config" >
+20-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:8:5-65
+21        <activity
+21-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:9:5-20:16
+22            android:name="com.radocc.plugins.videoplayerexample.EmbeddingV1Activity"
+22-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:14:7-42
+23            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection"
+23-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:10:7-100
+24            android:exported="true"
+24-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:11:7-30
+25            android:hardwareAccelerated="true"
+25-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:12:7-41
+26            android:launchMode="singleTop"
+26-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:13:7-37
+27            android:theme="@style/LaunchTheme"
+27-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:15:7-41
+28            android:windowSoftInputMode="adjustResize" >
+28-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:16:7-49
+29            <meta-data
+29-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:17:7-19:31
+30                android:name="com.radocc.app.android.SplashScreenUntilFirstFrame"
+30-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:18:9-74
+31                android:value="true" />
+31-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:19:9-29
+32        </activity>
+33        <activity
+33-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:21:5-31:16
+34            android:name="com.radocc.embedding.android.FlutterActivity"
+34-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:24:7-66
+35            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection"
+35-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:22:7-100
+36            android:hardwareAccelerated="true"
+36-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:23:7-41
+37            android:theme="@style/LaunchTheme"
+37-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:25:7-41
+38            android:windowSoftInputMode="adjustResize" >
+38-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:26:7-49
+39            <intent-filter>
+39-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:27:7-30:23
+40                <action android:name="android.intent.action.MAIN" />
+40-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:28:9-60
+40-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:28:17-58
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:29:9-68
+42-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:29:19-66
+43            </intent-filter>
+44        </activity>
+45
+46        <meta-data
+46-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:32:5-67
+47            android:name="flutterEmbedding"
+47-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:32:16-47
+48            android:value="2" />
+48-->/mnt/disco2/Radocc/Projetos/video_player/video_player-2.1.10/example/android/app/src/main/AndroidManifest.xml:32:48-65
+49    </application>
+50
+51</manifest>

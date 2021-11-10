@@ -1,0 +1,5 @@
+.packages
+analyze.log
+android/build
+.idea
+.dart_tool
