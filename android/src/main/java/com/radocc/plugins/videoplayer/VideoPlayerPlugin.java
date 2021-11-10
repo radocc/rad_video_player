@@ -38,7 +38,7 @@ public class VideoPlayerPlugin implements FlutterPlugin, VideoPlayerApi {
   public VideoPlayerPlugin() {}
 
   @SuppressWarnings("deprecation")
-  private VideoPlayerPlugin(com.radocc.plugin.common.PluginRegistry.Registrar registrar) {
+  private VideoPlayerPlugin(io.flutter.plugin.common.PluginRegistry.Registrar registrar) {
     videoPlayerFactory = new VideoPlayerFactory(registrar.context());
     registrar.platformViewRegistry()
             .registerViewFactory("flutter.io/videoPlayer/view", videoPlayerFactory);
@@ -54,7 +54,7 @@ public class VideoPlayerPlugin implements FlutterPlugin, VideoPlayerApi {
 
   /** Registers this with the stable v1 embedding. Will not respond to lifecycle events. */
   @SuppressWarnings("deprecation")
-  public static void registerWith(com.radocc.plugin.common.PluginRegistry.Registrar registrar) {
+  public static void registerWith(io.flutter.plugin.common.PluginRegistry.Registrar registrar) {
     final VideoPlayerPlugin plugin = new VideoPlayerPlugin(registrar);
     registrar.addViewDestroyListener(
         view -> {
