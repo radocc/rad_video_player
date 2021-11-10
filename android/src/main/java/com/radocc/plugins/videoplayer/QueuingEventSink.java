@@ -4,7 +4,7 @@
 
 package com.radocc.plugins.videoplayer;
 
-import com.radocc.plugin.common.EventChannel;
+import io.flutter.plugin.common.EventChannel;
 import java.util.ArrayList;
 
 /**

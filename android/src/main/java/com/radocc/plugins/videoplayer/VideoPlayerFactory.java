@@ -2,9 +2,9 @@ package com.radocc.plugins.videoplayer;
 
 import android.content.Context;
 
-import com.radocc.plugin.common.StandardMessageCodec;
-import com.radocc.plugin.platform.PlatformView;
-import com.radocc.plugin.platform.PlatformViewFactory;
+import io.flutter.plugin.common.StandardMessageCodec;
+import io.flutter.plugin.platform.PlatformView;
+import io.flutter.plugin.platform.PlatformViewFactory;
 
 public class VideoPlayerFactory extends PlatformViewFactory {
 

@@ -5,7 +5,7 @@ import android.view.SurfaceView;
 
 import androidx.annotation.NonNull;
 
-import com.radocc.plugin.platform.PlatformView;
+import io.flutter.plugin.platform.PlatformView;
 
 public class VideoView implements PlatformView {
     private static final String TAG = "VideoPlayerView";
