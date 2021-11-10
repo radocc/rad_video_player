@@ -275,8 +275,8 @@ packages:
     dependency: transitive
     description:
       path: "."
-      ref: master
-      resolved-ref: c6bfe99b74fed3b687bdac62d91988e9fc1c087c
+      ref: main
+      resolved-ref: d9a93f01d440cbd4eb4c511b1f54a47c9e6da0b1
       url: "https://github.com/radocc/rad_video_player_platform_interface.git"
     source: git
     version: "0.0.1"
