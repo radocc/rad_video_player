@@ -9,9 +9,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
-import 'package:rad_video_player_platform_interface/video_player_platform_interface.dart';
+import 'package:rad_video_player_platform_interface/rad_video_player_platform_interface.dart';
 
-export 'package:rad_video_player_platform_interface/video_player_platform_interface.dart'
+export 'package:rad_video_player_platform_interface/rad_video_player_platform_interface.dart'
     show DurationRange, DataSourceType, VideoFormat, VideoPlayerOptions;
 
 import 'src/closed_caption_file.dart';

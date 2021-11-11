@@ -270,16 +270,14 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.1+3"
+    version: "0.0.1+4"
   rad_video_player_platform_interface:
     dependency: transitive
     description:
-      path: "."
-      ref: main
-      resolved-ref: d9a93f01d440cbd4eb4c511b1f54a47c9e6da0b1
-      url: "https://github.com/radocc/rad_video_player_platform_interface.git"
-    source: git
-    version: "0.0.1"
+      name: rad_video_player_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.1+1"
   shelf:
     dependency: transitive
     description:
