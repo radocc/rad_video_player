@@ -50,7 +50,7 @@ final class VideoPlayer {
 
   private Surface surface;
 
-  private final TextureRegistry.SurfaceTextureEntry textureEntry;
+//  private final TextureRegistry.SurfaceTextureEntry textureEntry;
 
   private QueuingEventSink eventSink = new QueuingEventSink();
 
@@ -60,23 +60,21 @@ final class VideoPlayer {
 
   private final VideoPlayerOptions options;
 
-  private final VideoPlayerFactory videoPlayerFactory;
+//  private final VideoPlayerFactory videoPlayerFactory;
 
   private SurfaceView surfaceView;
 
   VideoPlayer(
       Context context,
       EventChannel eventChannel,
-      TextureRegistry.SurfaceTextureEntry textureEntry,
+      SurfaceView textureEntry,
       String dataSource,
       String formatHint,
       Map<String, String> httpHeaders,
-      VideoPlayerOptions options,
-      VideoPlayerFactory videoPlayerFactory) {
+      VideoPlayerOptions options) {
     this.eventChannel = eventChannel;
-    this.textureEntry = textureEntry;
+    this.surfaceView = textureEntry;
     this.options = options;
-    this.videoPlayerFactory = videoPlayerFactory;
 
     exoPlayer = new SimpleExoPlayer.Builder(context).build();
 
@@ -101,7 +99,7 @@ final class VideoPlayer {
     exoPlayer.setMediaSource(mediaSource);
     exoPlayer.prepare();
 
-    setupVideoPlayer(eventChannel, textureEntry);
+    setupVideoPlayer(eventChannel);
   }
 
   private static boolean isHTTP(Uri uri) {
@@ -161,7 +159,7 @@ final class VideoPlayer {
   }
 
   private void setupVideoPlayer(
-      EventChannel eventChannel, TextureRegistry.SurfaceTextureEntry textureEntry) {
+      EventChannel eventChannel) {
     eventChannel.setStreamHandler(
         new EventChannel.StreamHandler() {
           @Override
@@ -176,8 +174,6 @@ final class VideoPlayer {
         });
 
 
-//    surface = new Surface(textureEntry.surfaceTexture());
-    surfaceView = videoPlayerFactory.getVideoView().getView();
     exoPlayer.setVideoSurfaceView(surfaceView);
     setAudioAttributes(exoPlayer, options.mixWithOthers);
 
@@ -301,7 +297,7 @@ final class VideoPlayer {
     if (isInitialized) {
       exoPlayer.stop();
     }
-    textureEntry.release();
+    exoPlayer.clearVideoSurfaceView(surfaceView);
     eventChannel.setStreamHandler(null);
     if (surface != null) {
       surface.release();
@@ -310,7 +306,7 @@ final class VideoPlayer {
       exoPlayer.release();
     }
     if (surfaceView != null) {
-      surfaceView.getHolder().getSurface().release();
+      surfaceView = null;
     }
   }
 }

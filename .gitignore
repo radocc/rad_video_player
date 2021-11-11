@@ -1,5 +1,9 @@
+example/android/.gradle
 .packages
 analyze.log
 android/build
 .idea
 .dart_tool
+example/build
+example/android/.idea
+example/android/build

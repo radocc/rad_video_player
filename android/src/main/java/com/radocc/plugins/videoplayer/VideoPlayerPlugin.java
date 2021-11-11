@@ -7,6 +7,8 @@ package com.radocc.plugins.videoplayer;
 import android.content.Context;
 import android.os.Build;
 import android.util.LongSparseArray;
+import android.view.SurfaceView;
+
 import io.flutter.FlutterInjector;
 import io.flutter.Log;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
@@ -33,6 +35,7 @@ public class VideoPlayerPlugin implements FlutterPlugin, VideoPlayerApi {
   private FlutterState flutterState;
   private VideoPlayerOptions options = new VideoPlayerOptions();
   private VideoPlayerFactory videoPlayerFactory;
+  private FlutterPluginBinding binding;
 
   /** Register this with the v2 embedding for the plugin to respond to lifecycle callbacks. */
   public VideoPlayerPlugin() {}
@@ -65,11 +68,7 @@ public class VideoPlayerPlugin implements FlutterPlugin, VideoPlayerApi {
 
   @Override
   public void onAttachedToEngine(FlutterPluginBinding binding) {
-
-    videoPlayerFactory = new VideoPlayerFactory(binding.getApplicationContext());
-    binding
-            .getPlatformViewRegistry()
-            .registerViewFactory("flutter.io/videoPlayer/view", videoPlayerFactory);
+    this.binding = binding;
 
     if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
       try {
@@ -126,11 +125,19 @@ public class VideoPlayerPlugin implements FlutterPlugin, VideoPlayerApi {
   }
 
   public TextureMessage create(CreateMessage arg) {
-    TextureRegistry.SurfaceTextureEntry handle =
-        flutterState.textureRegistry.createSurfaceTexture();
+//    TextureRegistry.SurfaceTextureEntry handle =
+//        flutterState.textureRegistry.createSurfaceTexture();
+
+    videoPlayerFactory = new VideoPlayerFactory(binding.getApplicationContext());
+    binding
+            .getPlatformViewRegistry()
+            .registerViewFactory("flutter.io/videoPlayer/view", videoPlayerFactory);
+
+    SurfaceView handle = videoPlayerFactory.getVideoView().getView();
+
     EventChannel eventChannel =
         new EventChannel(
-            flutterState.binaryMessenger, "flutter.io/videoPlayer/videoEvents" + handle.id());
+            flutterState.binaryMessenger, "flutter.io/videoPlayer/videoEvents" + handle.getId());
 
     VideoPlayer player;
     if (arg.getAsset() != null) {
@@ -149,8 +156,7 @@ public class VideoPlayerPlugin implements FlutterPlugin, VideoPlayerApi {
               "asset:///" + assetLookupKey,
               null,
               null,
-              options,
-                  videoPlayerFactory);
+              options);
     } else {
       @SuppressWarnings("unchecked")
       Map<String, String> httpHeaders = arg.getHttpHeaders();
@@ -162,13 +168,12 @@ public class VideoPlayerPlugin implements FlutterPlugin, VideoPlayerApi {
               arg.getUri(),
               arg.getFormatHint(),
               httpHeaders,
-              options,
-                  videoPlayerFactory);
+              options);
     }
-    videoPlayers.put(handle.id(), player);
+    videoPlayers.put(handle.getId(), player);
 
     TextureMessage result = new TextureMessage();
-    result.setTextureId(handle.id());
+    result.setTextureId(Long.parseLong(handle.getId()+"") );
     return result;
   }
 

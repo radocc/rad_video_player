@@ -5,7 +5,6 @@ import androidx.annotation.NonNull;
 import io.flutter.Log;
 
 import io.flutter.embedding.engine.FlutterEngine;
-import io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry;
 
 /**
  * Generated file. Do not edit.
@@ -16,14 +15,13 @@ import io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry;
 public final class GeneratedPluginRegistrant {
   private static final String TAG = "GeneratedPluginRegistrant";
   public static void registerWith(@NonNull FlutterEngine flutterEngine) {
-    ShimPluginRegistry shimPluginRegistry = new ShimPluginRegistry(flutterEngine);
     try {
       flutterEngine.getPlugins().add(new dev.flutter.plugins.integration_test.IntegrationTestPlugin());
     } catch(Exception e) {
       Log.e(TAG, "Error registering plugin integration_test, dev.flutter.plugins.integration_test.IntegrationTestPlugin", e);
     }
     try {
-      com.radocc.plugins.videoplayer.VideoPlayerPlugin.registerWith(shimPluginRegistry.registrarFor("com.radocc.plugins.videoplayer.VideoPlayerPlugin"));
+      flutterEngine.getPlugins().add(new com.radocc.plugins.videoplayer.VideoPlayerPlugin());
     } catch(Exception e) {
       Log.e(TAG, "Error registering plugin rad_video_player, com.radocc.plugins.videoplayer.VideoPlayerPlugin", e);
     }

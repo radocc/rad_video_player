@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-package com.radocc.plugins.videoplayerexample;
+package io.flutter.plugins.videoplayerexample;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
@@ -10,11 +10,11 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.radocc.embedding.engine.FlutterEngine;
-import com.radocc.embedding.engine.FlutterEngineCache;
-import com.radocc.embedding.engine.FlutterJNI;
-import com.radocc.embedding.engine.loader.FlutterLoader;
-import com.radocc.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.embedding.engine.FlutterEngineCache;
+import io.flutter.embedding.engine.FlutterJNI;
+import io.flutter.embedding.engine.loader.FlutterLoader;
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import com.radocc.plugins.videoplayer.VideoPlayerPlugin;
 import org.junit.Test;
 import org.junit.runner.RunWith;

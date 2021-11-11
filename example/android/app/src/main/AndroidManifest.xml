@@ -4,14 +4,14 @@
   <application
     android:icon="@mipmap/ic_launcher"
     android:label="video_player_example"
-    android:name="com.radocc.app.FlutterApplication"
+    android:name="io.flutter.app.FlutterApplication"
     android:networkSecurityConfig="@xml/network_security_config">
     <activity
       android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection"
       android:exported="true"
       android:hardwareAccelerated="true"
       android:launchMode="singleTop"
-      android:name="com.radocc.com.radocc.plugins.videoplayerexample.EmbeddingV1Activity"
+      android:name="io.flutter.plugins.videoplayerexample.EmbeddingV1Activity"
       android:theme="@style/LaunchTheme"
       android:windowSoftInputMode="adjustResize">
       <meta-data
@@ -21,7 +21,7 @@
     <activity
       android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection"
       android:hardwareAccelerated="true"
-      android:name="com.radocc.embedding.android.FlutterActivity"
+      android:name="io.flutter.embedding.android.FlutterActivity"
       android:theme="@style/LaunchTheme"
       android:windowSoftInputMode="adjustResize">
       <intent-filter>

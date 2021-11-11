@@ -2,14 +2,14 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-package com.radocc.plugins.videoplayerexample;
+package io.flutter.plugins.videoplayerexample;
 
 import android.os.Bundle;
 import dev.flutter.plugins.integration_test.IntegrationTestPlugin;
 import com.radocc.plugins.videoplayer.VideoPlayerPlugin;
 
 @SuppressWarnings("deprecation")
-public class EmbeddingV1Activity extends com.radocc.app.FlutterActivity {
+public class EmbeddingV1Activity extends io.flutter.app.FlutterActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
