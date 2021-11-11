@@ -6,4 +6,3 @@ android/build
 .dart_tool
 example/build
 example/android/.idea
-example/android/build

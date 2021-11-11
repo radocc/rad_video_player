@@ -24,8 +24,4 @@ public class VideoPlayerFactory extends PlatformViewFactory {
     public VideoView getVideoView() {
         return videoView;
     }
-
-    dispose() {
-        
-    }
 }
